@@ -1,0 +1,101 @@
+/* ToDoList.css */
+.container {
+    padding: 30px;
+    background-color: #fff3e0; /* 크림 색상 배경 */
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+  }
+  
+  .title {
+    color: #3b6b4f; /* 올리브 그린 */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  .input-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    flex-grow: 1;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: #3b6b4f; /* 포커스 시 올리브 그린 */
+  }
+  
+  .add-button {
+    padding: 15px 25px;
+    font-size: 1rem;
+    background-color: #3b6b4f; /* 올리브 그린 */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-button:hover {
+    background-color: #2e4c3b; /* 어두운 올리브 그린 */
+  }
+  
+  .todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 2px solid #e5e7eb;
+    background-color: #fff; /* 흰색 배경 */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .todo-item:hover {
+    background-color: #ffe6eb; /* 부드러운 피치 색상 */
+    transform: translateY(-3px);
+  }
+  
+  .todo-item span {
+    text-decoration: none;
+    color: #374151; /* 기본 색상 */
+    font-size: 1.2rem;
+  }
+  
+  .todo-item.completed span {
+    text-decoration: line-through;
+    color: #999; /* 완료된 todo 색상 */
+  }
+  
+  .delete-button {
+    background-color: #ef4444; /* 삭제 버튼은 눈에 띄는 빨간색 */
+    padding: 8px 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #dc2626; /* 호버 시 더 짙은 빨간색 */
+  }
+  
