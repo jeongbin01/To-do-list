@@ -1,0 +1,297 @@
+/* 전체적인 스타일 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f0f4f8; /* 부드러운 배경색 */
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* 세로로 중앙 정렬 */
+}
+
+/* 할 일 관련 컨테이너 */
+.todo-container {
+  background-color: #ffffff; /* 깨끗한 흰색 배경 */
+  width: 100%;
+  max-width: 600px; /* 가로 너비를 줄여 더 집중된 느낌 */
+  padding: 32px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* 내부 아이템을 부모 컨테이너에 맞춰서 확장 */
+}
+
+/* 제목 스타일 */
+h1 {
+  font-size: 28px;
+  color: #264653; /* 네이비 색상 */
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 폼 스타일 */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%; /* 폼이 컨테이너의 전체 너비를 차지 */
+}
+
+/* 인풋 및 셀렉트 스타일 */
+input[type="text"],
+select {
+  flex: 1; /* 인풋과 셀렉트가 동일 비율로 차지 */
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #b0bec5;
+  border-radius: 10px;
+  background: #f9f9f9;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #2a9d8f; /* 딥 그린 */
+}
+
+/* 버튼 스타일 */
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #2a9d8f; /* 딥 그린 */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #1f776f; /* 마우스 오버 색상 */
+}
+
+/* 할 일 목록 스타일 */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px; /* 할 일 목록과 폼 간격 */
+  width: 100%; /* 목록이 컨테이너의 전체 너비를 차지 */
+}
+
+/* 각 할 일 항목 스타일 */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.todo-item:hover {
+  background-color: #e0f7fa;
+}
+
+/* 할 일 항목 텍스트 스타일 */
+.todo-item span {
+  flex: 1;
+  font-size: 16px;
+  color: #37474f;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.todo-item span.completed {
+  text-decoration: line-through;
+  color: #90a4ae;
+}
+
+/* 삭제 버튼 스타일 */
+.todo-item button {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: white;
+  background-color: #ef5350;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.todo-item button:hover {
+  background-color: #c62828;
+}
+
+/* 체크박스 스타일 */
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #2a9d8f;
+  cursor: pointer;
+}
+
+/* 메모 스타일링 */
+.memo-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.memo-container h2 {
+  font-size: 24px;
+  color: #264653;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.memo-textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #b0bec5;
+  border-radius: 10px;
+  background: #f9f9f9;
+  resize: none; /* 크기 변경 불가 */
+  transition: border-color 0.2s ease;
+}
+
+.memo-textarea:focus {
+  outline: none;
+  border-color: #2a9d8f; /* 딥 그린 */
+}
+
+.memo-button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #2a9d8f;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.memo-button:hover {
+  background-color: #1f776f;
+}
+
+/* 달력 스타일링 */
+.calendar-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+  font-size: 24px;
+  color: #264653;
+}
+
+.calendar-header button {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.calendar-header button:hover {
+  background-color: #1f776f;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7개의 열 */
+  gap: 8px;
+  text-align: center;
+}
+
+.calendar-grid div {
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #f3f4f6;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.calendar-grid div:hover {
+  background-color: #e0f7fa; /* 마우스 오버 시 강조 */
+}
+
+.calendar-grid .today {
+  background-color: #ffeb3b; /* 오늘 날짜 강조 */
+}
+
+.calendar-grid .disabled {
+  color: #b0bec5; /* 비활성화된 날짜 */
+}
+
+.calendar-grid .selected {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 640px) {
+  .todo-container,
+  .memo-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  input[type="text"],
+  button,
+  select {
+    font-size: 14px;
+  }
+
+  .calendar-container {
+    padding: 15px;
+  }
+
+  .calendar-header h2 {
+    font-size: 20px;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+
+  .calendar-grid div {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
