@@ -32,12 +32,14 @@
 6. 선택한 날짜에 메모를 추가할 수 있습니다.  
 
 ## 기술 스택
-- **React.js**: 프론트엔드 개발 프레임워크  
-- **React Hooks**: `useState`, `useEffect` 등을 활용한 상태 관리  
-- **date-fns**: 날짜 관리 및 포맷팅 라이브러리  
-- **CSS3**: 반응형 디자인 적용  
-- **LocalStorage**: 사용자 데이터 저장  
-
+- **React.js**: 컴포넌트 기반 UI 라이브러리
+- **React Hooks (`useState`, `useEffect`)**: 상태 및 사이드 이펙트 관리
+- **JavaScript (ES6+)**: 최신 JS 문법 활용
+- **date-fns**: 날짜 처리 및 캘린더 기능 지원
+- **CSS3**: 반응형 UI 및 사용자 친화적인 스타일링 적용
+- **LocalStorage**: 로컬 환경에서 데이터 유지
+- **ReactDOM.createRoot()**: React 18 이상의 렌더링 방식 지원
+  
 ## 향후 계획
 - **Drag & Drop 기능 추가**: 할 일 순서를 자유롭게 변경  
 - **데이터베이스 연동**: Firebase 또는 MongoDB를 활용한 데이터 저장  
